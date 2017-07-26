@@ -4,6 +4,9 @@
 	<title>Javascript calculator 2 numbers</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
 		function calc(){
 			var n1 = parseInt(document.getElementById('n1').value);
@@ -31,17 +34,45 @@
 	</script>
 </head>
 	<body>
-		<input type="text" id="n1"/><br/><br/>
-		<input type="text" id="n2"/><br/><br/>
-
-		<select id="operators">
-			<option value="+">+</option>
-			<option value="-">-</option>
-			<option value="*">*</option>
-			<option value="/">/</option>
-		</select><br/><br/>
-		<button onclick="calc();">=</button>
-		<input type="text" id="result">
-		
+		<div class="container">
+			
+				<div class="form-group" style="padding:10px;">
+					<label class="control-label col-sm-3" for="n1">Enter first number:</label>
+	      				<div class="col-sm-9">
+						<input class="form-control" type="text" id="n1">	
+					</div>
+				</div><br/><br/>
+				<div class="form-group" style="padding:10px;">
+					<label class="control-label col-sm-3" for="n2">Enter second number:</label>
+	      				<div class="col-sm-9">
+						<input class="form-control" type="text" id="n2">	
+					</div>	
+				</div><br/><br/>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="operators">Select operation:</label>
+	      				<div class="col-sm-9">
+						<select  id="operators">
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">*</option>
+							<option value="/">/</option>
+						</select>
+					</div>	
+				</div><br/><br/>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="operators">Select operation:</label>
+	      				<div class="col-sm-9">
+						<button class="btn btn-warning" onclick="calc();">=</button>
+					</div>
+				</div><br/><br/>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="result">Result:</label>
+	      				<div class="col-sm-9">
+						<input class="form-control" type="text" id="result">
+					</div>
+				</div>
+							
+			</div>
+		</div>	
 	</body>
 </html>
